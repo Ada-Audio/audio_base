@@ -3,3 +3,9 @@
 
 # Ada Library Information
 *.ali
+
+# Directories
+alire
+bin
+lib
+obj
