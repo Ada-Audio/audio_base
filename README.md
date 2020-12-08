@@ -88,5 +88,5 @@ gprbuild
 Using the Library
 -----------------
 
-This Library is used as a starting point for creating child packages based on
+This Library serves as a starting point for creating child packages based on
 the `Audio` or the `Audio.RIFF` packages.
