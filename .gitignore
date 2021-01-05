@@ -4,8 +4,11 @@
 # Ada Library Information
 *.ali
 
-# Directories
+# Alire
 alire
+alire.lock
+
+# Directories
 bin
 lib
 obj
