@@ -1,5 +1,5 @@
-Base for Audio Applications using Ada
-=====================================
+Base Library for Audio Applications using Ada
+=============================================
 
 **Version 1.0.0**
 
