@@ -1,0 +1,28 @@
+name: GNAT Community 2020 on macOS 10.15
+
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: macos-10.15
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Check cached GNAT toolchain
+      uses: actions/cache@v2
+      with:
+        path: ./cached_gnat
+        key: ${{ runner.os }}-gnat-ce-2020
+
+    - name: Set up GNAT toolchain
+      uses: ada-actions/toolchain@ce2020
+      with:
+        distrib: community
+        target: native
+        community_year: 2020
+        install_dir: ./cached_gnat
+
+    - name: Build Audio Library
+      run: gprbuild -P audio_base.gpr
