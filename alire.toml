@@ -5,7 +5,7 @@ long-description = """
 This crate contains basic Ada packages for audio applications.
 """
 name = "audio_base"
-version = "1.0.0-rc.2"
+version = "1.0.0"
 website="https://github.com/Ada-Audio/audio_base"
 licenses = ["MIT"]
 authors=["Gustavo A. Hoffmann"]
