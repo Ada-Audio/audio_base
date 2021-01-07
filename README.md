@@ -36,28 +36,10 @@ This Package has been tested with following compilers and platforms:
 Setting Up the Library
 ----------------------
 
-### Using ALIRE
-
-You can retrieve this Library as a crate from
-[ALIRE](https://alire.ada.dev) (the Ada LIbrary REpository):
-
-```sh
-alr get audio_base
-```
-
-Then, you can build the Library (as a standalone library) with
-[ALIRE](https://alire.ada.dev) using the following command:
-
-```sh
-cd audio_base*
-
-alr build
-```
-
 ### Cloning the source-code
 
-Alternatively, you can clone the source-code of the Library and its
-dependencies using these commands from the root directory of your project:
+You can clone the source-code of the Library using these commands from the root
+directory of your project:
 
 ```sh
 mkdir deps
@@ -65,8 +47,16 @@ mkdir deps
 (cd deps && git clone https://github.com/Ada-Audio/audio_base )
 ```
 
-Then, you have to include the Library in your GPRbuild project by adding
-the following line:
+Note that you can use the `--branch` option to retrieve a specific version —
+for example: `--branch 1.0.0`.
+
+### Integration with your project
+
+This section describes how to manually integrate the Library into your GPRbuild
+project. If you're using ALIRE, please refer to the next section.
+
+You can include the Library in your GPRbuild project by adding the following
+line:
 
 ```
 with "audio_base.gpr";
@@ -82,6 +72,23 @@ to set the path to the GPRbuild project file using the environment variable
 export GPR_PROJECT_PATH="$(cd deps/audio_base && pwd)"
 
 gprbuild
+```
+
+### Using ALIRE
+
+If you're using [ALIRE](https://alire.ada.dev) (the Ada LIbrary REpository),
+this section shows how you can integrate the Library to your project using the
+ALIRE environment. These are the prerequisites:
+
+1. You have cloned the source-code of the Library using one of the methods
+   described above.
+
+2. You have initialized your project for ALIRE.
+
+You can now integrate the Library to the ALIRE environment using this command:
+
+```sh
+alr with audio_base      --use $(cd deps/audio_base      && pwd)
 ```
 
 
