@@ -85,8 +85,7 @@ ALIRE environment. These are the prerequisites:
 
 2. You have initialized your project for ALIRE.
 
-You can now integrate the Library to the ALIRE environment using these
-commands:
+You can now integrate the Library to the ALIRE environment using this command:
 
 ```sh
 alr with audio_base      --use $(cd deps/audio_base      && pwd)
