@@ -50,8 +50,13 @@ mkdir deps
 Note that you can use the `--branch` option to retrieve a specific version —
 for example: `--branch 1.0.0`.
 
-Then, you have to include the Library in your GPRbuild project by adding
-the following line:
+### Integration with your project
+
+This section describes how to manually integrate the Library into your GPRbuild
+project. If you're using ALIRE, please refer to the next section.
+
+You can include the Library in your GPRbuild project by adding the following
+line:
 
 ```
 with "audio_base.gpr";
