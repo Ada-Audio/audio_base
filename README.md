@@ -47,6 +47,9 @@ mkdir deps
 (cd deps && git clone https://github.com/Ada-Audio/audio_base )
 ```
 
+Note that you can use the `--branch` option to retrieve a specific version —
+for example: `--branch 1.0.0`.
+
 Then, you have to include the Library in your GPRbuild project by adding
 the following line:
 
